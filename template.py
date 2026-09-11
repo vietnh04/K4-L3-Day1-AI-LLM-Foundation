@@ -138,7 +138,7 @@ def compare_models(prompt: str) -> dict:
     mini_response, mini_latency = call_openai_mini(prompt)
 
     cost = (
-        (len(gpt4o_text.split()) / 0.75)
+        (len(gpt4o_response.split()) / 0.75)
         / 1000
         * PRICING_PER_1K_TOKENS["gpt-4o"]["output"]
     )
